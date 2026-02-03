@@ -23,7 +23,7 @@ const Hero = () => {
 
       {/* Right-side container */}
     <div className=' md:flex justify-center '>
-      <div className='w-72 h-72 rounded-full bg-white/5 border border-white/10'>
+      <div className='w-72 h-72 hidden sm:block rounded-full bg-white/5 border border-white/10 '>
 
       </div>
     </div>

@@ -61,7 +61,7 @@ const Projects = () => {
           {projects.map((project, index)=>(
             <div key={index} className='group flex flex-col h-full rounded-2xl bg-white border shadow-sm hover:shadow-xl transition'>
               {/* project preview k liy  imaage lgani ha baad me  */}
-              <div className='h-44 rounded-t-2xl bg-gradient-to-r from-purple-500 to-blue-500 opacity-90'></div>
+              {/* <div className='h-44 rounded-t-2xl bg-gradient-to-r from-purple-500 to-blue-500 opacity-90'></div> */}
               {/* Project ka content: - */}
               <div className='p-6 flex flex-col h-full'>
                   <h3 className='text-xl font-semibold text-gray-900 mb-2'>{project.title}</h3>

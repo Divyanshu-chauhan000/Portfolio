@@ -1,35 +1,79 @@
-import React from 'react'
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-
+import React from "react";
+import { FaGithub, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
+import { useState } from "react";
 
 const Footer = () => {
+  const [link, setLink] = useState([
+    {
+      item: "Home",
+    },
+    {
+      item: "About",
+    },
+    {
+      item: "Skills",
+    },
+    {
+      item: "Projects",
+    },
+    {
+      item: "Contact",
+    },
+  ]);
+
   return (
-    <section id='footer' className='bg-[#020617] border-t border-gray-800'>
-     <div className='max-w-6xl mx-auto py-10'>
-         <div className='flex flex-col mg:flex-row items-center justify-between gap-6'>
-            <h3 className='text-xl font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
-                  Divyanshu.dev
-            </h3>
-            <p className='text-sm text-gray-400 text-center'>
-                 build clean and modern web experiences 
-            </p>
-          {/* social media icons  */}
-            <div className='flex gap-4'>
-               <a href="#" className='text-gray-400 hover:text-cyan-400 transition'><FaGithub size={20}/></a>
-               <a href="#" className='text-gray-400 hover:text-cyan-400 transition'><FaLinkedin size={20}/></a>
-               <a href="#" className='text-gray-400 hover:text-cyan-400 transition'><FaEnvelope size={20}/></a>
-            </div>
-         </div>
+    <section id="footer" className="bg-black border-t border-gray-800">
+      <div className="max-w-6xl mx-auto py-10 w-full grid md:grid-cols-2 gap-12 items-center">
+        {/* Left section */}
+        <div className="text-gray-200 ">
+          <a href="#">
+            <h1 className="text-xl font-bold">Divyanshu</h1>
+          </a>
+          <p className="py-4">Crafting clean, scalable web experiences</p>
+        </div>
+        {/* Right section */}
+        <div className="flex  justify-around items-center">
+          {/* footer-links */}
 
-         {/* Bottom content ---> */}
-         <div className='mt-8 border-t border-gray-800 pt-4 text-center'>
-            <p className='text-gray-500 text-sm'>
-                <span> &copy; </span> {new Date().getFullYear()} Divyanshu Chauhan  . All rights reserved.
-            </p>
-         </div>
-     </div>
+          <div className="text-white gap-4 flex  ">
+            {link.map((val, index) => (
+              <a href="" key={index} >{val.item}</a>
+            ))}
+          </div>
+
+          {/* footer social media links */}
+
+          <div className="flex  gap-4 text-gray-200   text-xl">
+            <a
+              href=""
+              className=" hover:bg-green-400 rounded-full p-1 transition duration-300"
+            >
+              <FaWhatsapp />
+            </a>
+            <a
+              href=""
+              className=" hover:bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] rounded-full p-1 transition duration-300"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href=""
+              className=" hover:bg-[#0a66c2] rounded-full p-1 transition duration-300"
+            >
+              <CiLinkedin />
+            </a>
+            <a
+              href=""
+              className=" hover:bg-[#2b3137] rounded-full p-1 transition duration-300"
+            >
+              <FaGithub />
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

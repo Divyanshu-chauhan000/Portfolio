@@ -45,12 +45,12 @@ const skills = [
 
 const Skills = () => {
   return (
-   <section id='skills' className='py-20 bg-[#0f172a]' >
+   <section id='skills' className='py-20 bg-black relative' >
     <div className='max-w-6xl mx-auto px-6'>
       {/* Heading --->  */}
       <div className='text-center mb-14'>
         <h2 className='text-4xl mb-4 font-bold md:text-5xl bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>My Skills</h2>
-        <p className='text-gray-400 mt-3'>Technologies I work with</p>
+        <p className='text-gray-200 mt-3'>Technologies I work with</p>
       </div>
 
       {/* Skills add krni ha  */}
